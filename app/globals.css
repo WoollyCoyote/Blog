@@ -26,8 +26,57 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
+input{
+  color:black;
+}
+
+
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+} */
+.modal {
+  z-index: 1;
+  position: relative;
+  bottom:75px;
+  display: none;
+  flex-shrink: 10;
 }
+.modal-open {
+  pointer-events: auto;
+  bottom:90px;
+  position: relative;
+  display: initial;
+}
+
+.modal-box{
+color:green;
+}
+
+.card{
+  /* display: flex;
+  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  border:1px solid white;
+  padding: 1em;
+}
+/* .card-body{
+} */
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border:1px solid white;
+
+}
+.modalBody{
+  flex-direction: column;
+background-color: white;
+color:black;
+}
+/* .deleteBox{
+
+} */
