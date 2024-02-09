@@ -29,10 +29,10 @@ function checkBlogs() {
     e.preventDefault();
     setBlogToEdit({
       ...blogToEdit,
-      id:blog.blogs.id,
-      title:blog.blogs.title,
-      para:blog.blogs.para,
-      date:blog.blogs.date
+      id: blog.blogs.id,
+      title: blog.blogs.title,
+      para: blog.blogs.para,
+      date: blog.blogs.date
     })
   
     console.log(blog.blogs.id);
