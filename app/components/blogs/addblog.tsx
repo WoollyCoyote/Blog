@@ -48,7 +48,7 @@ router.refresh();
           Start new Blog
         </button>
         <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
-          <form onSubmit={handleSubmitNewBlog}>
+            <form onSubmit={handleSubmitNewBlog}>
             <div className="modal-action">
               <input
                 name="title"
