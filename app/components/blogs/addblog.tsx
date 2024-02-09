@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const AddBlog = () => {
   const router = useRouter();
+
 const [modalOpen,setModalOpen]=useState(false)
 const [blog,setBlog] = useState({
     date:"",
@@ -21,7 +22,7 @@ setBlog({
     })    
 }
 
-const handleSubmitNewBlog = async (e: React.FormEvent<HTMLInputElement>) =>{
+const handleSubmitNewBlog = async (e: React.FormEvent<HTMLFormElement>) =>{
   e.preventDefault();
 await addBlog({
   id:uuidv4(),
