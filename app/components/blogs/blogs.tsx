@@ -6,7 +6,16 @@ import { useState } from "react";
 import { editBlog, deleteBlog } from "../../pages/api";
 import { Modal } from "../Modal";
 
-const blogs = (blog:any) => {
+type BlogType = {
+  blogs: {
+    id: string;
+    title: string;
+    para: string;
+    date: string;
+  };
+};
+
+const blogs = (blog: BlogType) => {
   const [openModalEdit, setOpenModalEdit] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
   const [blogToEdit, setBlogToEdit] = useState(blog);
