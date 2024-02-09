@@ -6,7 +6,7 @@ import { useState } from "react";
 import { editBlog, deleteBlog } from "../../pages/api";
 import { Modal } from "../Modal";
 
-const blogs = (blog) => {
+const blogs = (blog:any) => {
   const [openModalEdit, setOpenModalEdit] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
   const [blogToEdit, setBlogToEdit] = useState(blog);
