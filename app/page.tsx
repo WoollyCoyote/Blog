@@ -4,15 +4,8 @@ import BlogList from "./components/blogs/blogList";
 import { getAllBlogs } from "./pages/api";
 import Link from "next/link";
 export default async function Home() {
+
   const blogs = await getAllBlogs();
-  function reverseString(str) {
-if(str.length <= 1){
-return str
-}
-return str.slice(-1)+reverseString(str.slice(0,-1))
-  }
-  console.log(reverseString("apple"))
-  console.log("hello world")
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

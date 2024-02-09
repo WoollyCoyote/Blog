@@ -16,7 +16,7 @@ function checkBlogs() {
   console.log(blogToEdit);
 }
 
-  const handleSubmitEditBlog = async (e) => {
+  const handleSubmitEditBlog = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setBlogToEdit({
       ...blogToEdit,
@@ -32,13 +32,13 @@ function checkBlogs() {
     router.refresh();
   };
 
-  const handleSubmitDeleteBlog = async (id) => {
+  const handleSubmitDeleteBlog = async (id:string) => {
     await deleteBlog(id);
     setOpenModalDelete(false);
     router.refresh();
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setBlogToEdit({

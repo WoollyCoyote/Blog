@@ -44,26 +44,18 @@ input{
   flex-shrink: 10;
 }
 .modal-open {
+  display: flex;
+  flex-direction: column;
   pointer-events: auto;
-  bottom:90px;
+  bottom:20px;
   position: relative;
-  display: initial;
+  padding: 1em;
 }
 
 .modal-box{
 color:green;
 }
 
-.card{
-  /* display: flex;
-  flex-direction: column; */
-  display: flex;
-  flex-direction: column;
-  border:1px solid white;
-  padding: 1em;
-}
-/* .card-body{
-} */
 
 .icons{
   display: flex;

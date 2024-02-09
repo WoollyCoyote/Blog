@@ -14,14 +14,14 @@ const [blog,setBlog] = useState({
     para:""
 })
 
-const handleChange = (e)=>{
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>)=>{
 setBlog({
     ...blog,
     [e.target.name]:e.target.value
     })    
 }
 
-const handleSubmitNewBlog = async (e) =>{
+const handleSubmitNewBlog = async (e: React.FormEvent<HTMLInputElement>) =>{
   e.preventDefault();
 await addBlog({
   id:uuidv4(),
