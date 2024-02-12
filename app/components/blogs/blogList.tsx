@@ -7,16 +7,19 @@ type BlogType = {
     para: string;
     date: string;
   };
+  title:string,
+  para:string,
+  date:string,
   map(arg0: (blog: { id: string; title: string; para: string; date: string; }) => JSX.Element): React.ReactNode;
 };
 
-const BlogList = ({blogs}: {blogs: BlogType}) => {
+const BlogList = ({blogs}:BlogType) => {
   console.log(blogs);
   
     return ( 
-       <div>
+       <div className="blogs">
          
-            {blogs.map((blog: { id: string; title: string; para: string; date: string; }) => (<Blogs blogs={blog} key={blog.id} />))}
+            {blogs.map((blog:any) => (<Blogs blogs={blog} key={blog.id} title={blog.title} para={blog.para} />))}
            
        </div>
      );

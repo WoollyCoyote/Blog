@@ -13,12 +13,15 @@ type BlogType = {
     para: string;
     date: string;
   };
+  title:string,
+  para:string,
+  date:string,
 };
 
 const blogs = (blog: BlogType) => {
   const [openModalEdit, setOpenModalEdit] = useState(false);
   const [openModalDelete, setOpenModalDelete] = useState(false);
-  const [blogToEdit, setBlogToEdit] = useState(blog);
+  const [blogToEdit, setBlogToEdit] = useState(blog.blogs);
   const router = useRouter();
 
 function checkBlogs() {
@@ -27,15 +30,15 @@ function checkBlogs() {
 
   const handleSubmitEditBlog = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    setBlogToEdit({
-      ...blogToEdit,
-      id: blog.blogs.id,
-      title: blog.blogs.title,
-      para: blog.blogs.para,
-      date: blog.blogs.date
-    })
+    // setBlogToEdit((prevBlog) => ({
+    //   ...prevBlog,
+    //   id: blog.blogs.id,
+    //   title:blog.blogs.title,
+    //   para:blog.blogs.para,
+    //   date:blog.blogs.date
+    // }));
   
-    console.log(blog.blogs.id);
+    console.log(blogToEdit.id);
     setOpenModalEdit(false);
     await editBlog(blogToEdit);
     router.refresh();
@@ -50,18 +53,18 @@ function checkBlogs() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
-    setBlogToEdit({
-      ...blog.blogs,
+    setBlogToEdit((prevBlog) => ({
+      ...prevBlog,
       [name]: value,
-    });
+    }));
     console.log(checkBlogs());
   };
 
   return (
     <div className="card">
-      <div className="card-body" key={blog.blogs.id}>
+      <div  key={blog.blogs.id}>
         <h2 className="card-title">{blog.blogs.title}</h2>
-        <p>{blog.blogs.para}</p>
+        <p className="card-body">{blog.blogs.para}</p>
         <p>{blog.blogs.date}</p>
       </div>
       <div className="icons">
@@ -93,7 +96,7 @@ function checkBlogs() {
               type="text"
               name="date"
               id="date"
-              value={blog.blogs.date}
+              value={blogToEdit.date}
               onChange={handleChange}
             />
             <button type="submit">Submit</button>

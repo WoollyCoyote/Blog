@@ -26,29 +26,58 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-input{
+input,textarea{
   color:black;
 }
 
 
-/* @layer utilities {
+@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-} */
-.modal {
+}
+.blogs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100%;
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  transition: 3.3s;
+  max-width: 500px;
+  cursor: pointer;
+  text-align: center;
+  overflow: auto;
   z-index: 1;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100%;
+  align-items: center;
+
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  text-align: center;
+  outline: 1px solid red;
+}
+.modal {
   position: relative;
   bottom:75px;
   display: none;
-  flex-shrink: 10;
 }
 .modal-open {
   display: flex;
   flex-direction: column;
   pointer-events: auto;
   bottom:20px;
-  position: relative;
   padding: 1em;
 }
 
