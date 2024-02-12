@@ -85,7 +85,7 @@ const AddBlog = () => {
             <textarea
               name="para"
               onChange={handleChange} // Update the type of the event handler
-              type="textarea"
+              // type="textrea"
               placeholder="How is you're day?"
               className="input input-bordered w-full"
               value={blog.para}
