@@ -1,17 +1,20 @@
 import Blogs from "./blogs";
 
-type BlogType = {
-  blogs: {
-    id: string;
-    title: string;
-    para: string;
-    date: string;
-  };
-  title:string,
-  para:string,
-  date:string,
-  map(arg0: (blog: { id: string; title: string; para: string; date: string; }) => JSX.Element): React.ReactNode;
-};
+
+type BlogType = any | any[]
+
+// type BlogType = {
+//   blogs: {
+//     id: string;
+//     title: string;
+//     para: string;
+//     date: string;
+//   };
+//   title:string,
+//   para:string,
+//   date:string,
+//   map(arg0: (blog: { id: string; title: string; para: string; date: string; }) => JSX.Element): React.ReactNode;
+// };
 
 const BlogList = ({blogs}:BlogType) => {
   console.log(blogs);
