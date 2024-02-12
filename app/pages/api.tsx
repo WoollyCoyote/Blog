@@ -1,6 +1,6 @@
 const baseurl = "https://milage.onrender.com";
 
-export const addBlog = async (blog) => {
+export const addBlog = async (blog:object) => {
   const res = await fetch(`${baseurl}/blogs`, {
     method: "POST",
     headers: {
@@ -12,7 +12,7 @@ export const addBlog = async (blog) => {
   return newTodo;
 };
 
-export const editBlog = async (blog) => {
+export const editBlog = async (blog:any) => {
   const res = await fetch(`${baseurl}/blogs/${blog.id}`, {
     method: "PUT",
     headers: {
@@ -24,7 +24,7 @@ export const editBlog = async (blog) => {
   return updatedTodo;
 };
 
-export const deleteBlog = async (id) => {
+export const deleteBlog = async (id:string) => {
   await fetch(`${baseurl}/blogs/${id}`, {
     method: "DELETE",
   });
