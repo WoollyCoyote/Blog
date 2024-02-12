@@ -12,7 +12,12 @@ export const addBlog = async (blog:object) => {
   return newTodo;
 };
 
-export const editBlog = async (blog:any) => {
+type Blog = {
+blog:string;
+id:string;
+}
+
+export const editBlog = async (blog:Blog) => {
   const res = await fetch(`${baseurl}/blogs/${blog.id}`, {
     method: "PUT",
     headers: {
