@@ -55,34 +55,33 @@ input,textarea{
   z-index: 1;
 }
 
-.card-body{
+.card{
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 100%;
   align-items: center;
-  background-color: white;
   color: black;
   max-width: 500px;
   text-align: center;
-  outline: 1px solid red;
 }
+
+
 .modal {
-  position: relative;
-  bottom:75px;
   display: none;
-  outline: 1px solid red;
+  background-color: black;
+  color:white;
+  padding: 5px;
+  border-radius: 10px;
+
+  z-index: 2;
 }
 .modal-open {
   display: flex;
   flex-direction: column;
   pointer-events: auto;
   bottom:20px;
-  outline: 1px solid red;
-}
-
-.modal-box{
-color:green;
 }
 
 
@@ -90,17 +89,5 @@ color:green;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border:1px solid white;
-  outline: 1px solid red;
 
 }
-.modalBody{
-  flex-direction: column;
-background-color: white;
-color:black;
-outline: 1px solid red;
-
-}
-/* .deleteBox{
-
-} */

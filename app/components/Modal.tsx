@@ -9,8 +9,8 @@ type ModalProps = {
 export const Modal = ({ modalOpen, setModalOpen, children }: ModalProps) => {
   return (
     <div className={`modal ${modalOpen ? "modal-open" : ""}`}>
-      <button onClick={() => setModalOpen(false)}>✕</button>
       {children}
+      <button onClick={() => setModalOpen(false)}>✕</button>
     </div>
   );
 };

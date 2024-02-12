@@ -77,14 +77,16 @@ function checkBlogs() {
       
             </div>
         <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
-          <form className="modalBody" onSubmit={handleSubmitEditBlog} key={blogToEdit.id}>
+          <form className="card" onSubmit={handleSubmitEditBlog} key={blogToEdit.id}>
+            <div className="card-body">
+
             <input
               type="text"
               name="title"
               id="title"
               value={blogToEdit.title}
               onChange={handleChange}
-            />
+              />
             <input
               type="text"
               name="para"
@@ -98,8 +100,9 @@ function checkBlogs() {
               id="date"
               value={blogToEdit.date}
               onChange={handleChange}
-            />
+              />
             <button type="submit">Submit</button>
+              </div>
           </form>
         </Modal>
         <Modal modalOpen={openModalDelete} setModalOpen={setOpenModalDelete}>
