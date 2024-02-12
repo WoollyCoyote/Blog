@@ -22,7 +22,15 @@ const BlogList = ({blogs}:BlogType) => {
     return ( 
        <div className="blogs">
          
-            {blogs.map((blog:any) => (<Blogs blogs={blog} key={blog.id} title={blog.title} para={blog.para} />))}
+            {blogs.map((blog:any) => (
+              <Blogs 
+                blogs={blog} 
+                key={blog.id} 
+                title={blog.title} 
+                para={blog.para} 
+                date={blog.date} // Add the 'date' prop
+              />
+            ))}
            
        </div>
      );
