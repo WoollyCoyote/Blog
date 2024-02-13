@@ -13,11 +13,16 @@ export const addBlog = async (blog: object) => {
 };
 
 type Blog = {
-  blog: string;
   id: string;
   title: string;
   para: string;
   date: string;
+  blog:{
+    id: string;
+    title: string;
+    para: string;
+    date: string;
+  }
 };
 
 export const editBlog = async (blog: Blog) => {

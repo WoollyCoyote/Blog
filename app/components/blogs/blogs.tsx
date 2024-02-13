@@ -30,17 +30,10 @@ function checkBlogs() {
 
   const handleSubmitEditBlog = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    // setBlogToEdit((prevBlog) => ({
-    //   ...prevBlog,
-    //   id: blog.blogs.id,
-    //   title:blog.blogs.title,
-    //   para:blog.blogs.para,
-    //   date:blog.blogs.date
-    // }));
   
     console.log(blogToEdit.id);
     setOpenModalEdit(false);
-    await editBlog(blogToEdit);
+    await editBlog({ ...blogToEdit, blog: blogToEdit });
     router.refresh();
   };
 
