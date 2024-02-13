@@ -61,7 +61,7 @@ function checkBlogs() {
   };
 
   return (
-    <div className="card">
+    <div className="card blogs">
       <div  key={blog.blogs.id}>
         <h2 className="card-title">{blog.blogs.title}</h2>
         <p className="card-body">{blog.blogs.para}</p>
@@ -95,7 +95,7 @@ function checkBlogs() {
               onChange={handleChange}
             />
             <input
-              type="text"
+              type="date"
               name="date"
               id="date"
               value={blogToEdit.date}

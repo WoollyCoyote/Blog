@@ -76,7 +76,7 @@ const AddBlog = () => {
             <input
               name="date"
               onChange={handleChange} // Update the type of the event handler
-              type="text"
+              type="date"
               placeholder="date"
               className="input input-bordered w-full"
               value={blog.date}
